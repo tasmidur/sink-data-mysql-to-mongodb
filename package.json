@@ -1,9 +1,9 @@
 {
-  "name": "cdc",
+  "name": "sink-data-mysql-to-mongodb",
   "version": "1.0.1",
   "description": "Change data capture",
-  "main": "server.js",
-  "repository": "https://github.com/tasmidur/cdc.git",
+  "main": "app.js",
+  "repository": "https://github.com/tasmidur/sink-data-mysql-to-mongodb.git",
   "author": "Md Tasmidur Rahman",
   "license": "MIT",
   "private": false,
