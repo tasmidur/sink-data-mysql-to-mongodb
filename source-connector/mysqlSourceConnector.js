@@ -1,7 +1,7 @@
 const mysql = require('mysql');
 const MySQLEvents = require('@rodrigogs/mysql-events');
 const {updateOrCreate,deleteDoc} =require('../sink-connector/mongoDb');
-const eventOptionalConfig = require('event-config');
+const eventOptionalConfig = require("../config/eventConfig");
 const {EVENT_TYPE_DELETE} = require("../common/common");
 require('dotenv').config();
 
@@ -25,12 +25,12 @@ const mysqlDBSinker = async () => {
         onEvent: (event) => { // You will receive the events here
             if(event.type===EVENT_TYPE_DELETE){
                 const payload=event.affectedRows[0]?.before;
-                const documentName=event.schema;
+                const documentName=event.table;
                 console.log(payload);
                 deleteDoc(documentName,payload);
             }else{
                 const payload=event.affectedRows[0]?.after;
-                const documentName=event.schema;
+                const documentName=event.table;
                 console.log(payload);
                 updateOrCreate(documentName,payload);
             }

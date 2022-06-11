@@ -1,4 +1,4 @@
-module.exports = {
+const eventConfig = {
     /**
      * Default: false
      * Pass true to only emit binlog events that occur after ZongJi's instantiation.
@@ -11,8 +11,7 @@ module.exports = {
      * Example: { 'my_database': ['allow_table', 'another_table'], 'another_db': true }
      */
     includeSchema: {
-        cd:true,
-        cdc:true
+        cdc: true
     },
     /**
      * Object describing which databases and tables to exclude (Same format as includeSchema)
@@ -20,6 +19,7 @@ module.exports = {
      */
     excludeSchema: {
         mysql: true,
-        sys:true
+        sys: true
     }
-}
+};
+module.exports = eventConfig;
