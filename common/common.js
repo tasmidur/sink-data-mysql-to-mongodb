@@ -1,0 +1,5 @@
+module.exports = {
+    EVENT_TYPE_INSERT: "INSERT",
+    EVENT_TYPE_UPDATE: "UPDATE",
+    EVENT_TYPE_DELETE: "DELETE",
+};
