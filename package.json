@@ -1,0 +1,26 @@
+{
+  "name": "CDC",
+  "version": "1.0.1",
+  "description": "Change data chapture",
+  "main": "server.js",
+  "repository": "https://github.com/tasmidur/cdc.git",
+  "author": "Md Tasmidur Rahman",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "node Source-Connector/mysql-source.js",
+    "source": "node Source-Connector/mysql-source.js",
+    "sink": "node consumer/sink-connector.js",
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "test:unit": "vue-cli-service test:unit --watch"
+  },
+  "dependencies": {
+    "@rodrigogs/mysql-events": "^0.6.0",
+    "dotenv": "^16.0.1",
+    "kafkajs": "^2.0.2",
+    "mongodb": "^4.5.0",
+    "mysql": "^2.18.1"
+  }
+}
