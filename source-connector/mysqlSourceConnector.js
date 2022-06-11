@@ -1,7 +1,7 @@
 const mysql = require('mysql');
 const MySQLEvents = require('@rodrigogs/mysql-events');
 const {updateOrCreate,deleteDoc} =require('../sink-connector/mongoDb');
-const eventOptionalConfig = require('../common/event-config');
+const eventOptionalConfig = require('event-config');
 const {EVENT_TYPE_DELETE} = require("../common/common");
 require('dotenv').config();
 
