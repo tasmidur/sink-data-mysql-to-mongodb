@@ -44,5 +44,6 @@ You can also run this app as a Docker container:
 Step 1: Go to docker directory and run
 
 ``` bash
+cd docker
 docker-compose up
 ```
