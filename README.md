@@ -37,20 +37,11 @@ Step 3: Edit Sink Connector Config For MongDB
 MONGO_DB_URL="mongodb://localhost:27017"
 MONGO_DB_COLLECTION_NAME="collection_name"
 ```
-
-## Use Docker
-You can also run this app as a Docker container:
-
-Step 1: Go to docker directory and run
-
-``` bash
-cd docker
-docker-compose up
-```
-
-## Use Docker
+## Project Config
 Event Config file configuration
+
 Step 1: Go to config directory and edit eventConfig.js File
+
 ```
 const eventConfig = {
     /**
@@ -76,4 +67,19 @@ const eventConfig = {
         sys: true
     }
 }
+```
+
+## Use Docker
+You can also run this app as a Docker container:
+
+Step 1: Go to docker directory and run
+
+``` bash
+cd docker
+docker-compose up
+```
+## Run Project
+
+``` bash
+npm run start
 ```
