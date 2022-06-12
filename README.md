@@ -12,8 +12,8 @@ Sink data mysql data to mongodb based on mysql binlog event
 Clone the repo and install the dependencies.
 
 ```bash
-git clone https://github.com/contentful/the-example-app.nodejs.git
-cd the-example-app.nodejs
+git clone https://github.com/tasmidur/sink-data-mysql-to-mongodb.git
+cd sink-data-mysql-to-mongodb
 ```
 
 ```bash
