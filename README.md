@@ -1,5 +1,5 @@
 # Sink data mysql to mongodb
-Sink data mysql data to mongodb based on mysql binlog event 
+The application is developed by inspired by Kafka debezium. Here sync MySQL data to mongodb database based on mysql event. To capture the mysql event, I use a npm package https://github.com/p80-ch/mysql-event-emitter.
 ## Requirements
 
 * Node 12
@@ -8,6 +8,24 @@ Sink data mysql data to mongodb based on mysql binlog event
 * MongoDB
 
 ## Common setup
+
+### Mysql Server
+Enable binary log replication in `/etc/mysql/my.cnf`
+```
+[mysqld]
+server-id        = 1
+log_bin          = /var/log/mysql/mysql-bin
+log_bin_index    = /var/log/mysql/mysql-bin.index
+binlog-format    = row
+```
+
+### Mysql User
+Give your user the rights to read binary logs
+```sql
+GRANT REPLICATION SLAVE, REPLICATION CLIENT, SELECT ON *.* TO '[USER]'@'[HOST]'
+
+```
+### NodeJs Application
 
 Clone the repo and install the dependencies.
 
